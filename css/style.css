@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+body{
+    font-family: "나눔고딕";
+    background-color: #fffef9;
+}
+
+#wrap{
+    width: 2000px;
+    margin: 0 auto;}
+
+/* 헤더 - 인트로 */
+
+header{
+    position: relative;
+    width: 2000px;
+    height: 1500px;
+    background-image: url(../images/travel_bgc_gp.png);
+    background-repeat: no-repeat;
+}
+header>h1{
+    padding-top: 280px;
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+}
+header>h1>span{
+    font-weight: 800;
+    font-size: 85px;
+}
+header>p{
+    position: absolute;
+    top: 510px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: "나눔명조";
+    text-align: center;
+    background-color: #fff;
+    border: 5px solid #d36371;
+    border-radius: 40px;
+    opacity: 0.8;
+}
+header>div.scroll_icon{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 630px;
+    width: 130px;
+    margin-left: -65px;
+}
+header>div>p.scroll_down{
+    position: relative;
+    height: 130px;
+    text-indent: -9999px;
+    background-image: url(../images/travel_ic_scroll.png);
+    background-size: cover;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes scroll{
+    0% {bottom: 10px;}
+    50% {bottom: 70px;}
+    100% {bottom: 10px;}
+}
+
+/* 헤더 - nav */
+
+header>nav>.gp_gnb{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    margin-left: -550px;
+    bottom: 100px;
+    width: 1100px;
+}
+header>nav>.gp_gnb>li{
+    display: block;
+    width: 200px;
+    background-size: cover;
+    border: 5px solid #eebfb9;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+header>nav>.gp_gnb>li:nth-child(1){background-image: url(../images/travel_img_arboretum1.jpg);}
+header>nav>.gp_gnb>li:nth-child(2){
+    background-image: url(../images/travel_img_gppark1.jpg);
+    background-position: 72% center;
+}
+header>nav>.gp_gnb>li:nth-child(3){
+    background-image: url(../images/travel_img_lake1.jpg);
+    background-position: 30% center;
+}
+header>nav>.gp_gnb>li:nth-child(4){
+    background-image: url(../images/travel_img_museum1.jpeg);
+    background-position: 35% center;
+}
+header>nav>.gp_gnb>li>a{
+    display: block;
+    height: 400px;
+}
+header>nav>.gp_gnb>li>a>p{
+    display: none;
+    line-height: 400px;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+}
+header>nav>.gp_gnb>li:hover{
+    border: 5px solid #bfdf8a;
+}
+header>nav>.gp_gnb>li:hover>a{
+    background-color: #dedede;
+    opacity: 0.6;
+    border-radius: 100px;
+}
+header>nav>.gp_gnb>li:hover>a>p{
+    display: block;
+    color: #000;
+}
+
+/* 섹션 - txt */
+
+.gp_travel>.gp_travel_txt{
+    position: relative;
+    height: 300px;
+    background-color: #d36371;    
+    margin-bottom: 50px;
+}
+.gp_travel>.gp_travel_txt>h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -115px;
+    color: #fff;
+    font-size: 30px;
+    font-family: "나눔명조";
+    text-align: center;
+}
+.gp_travel>.gp_travel_txt>h2>span{color: #bfdf8a;}
+
+/* 섹션 - 아티클 : 공통 */
+.gp_travel>.gp_travel_num{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+/* 섹션 - 아티클 : 아침고요 수목원*/
+.gp_travel>.gp_travel_num.arboretum>.slides{position: relative;}
+.gp_travel>.gp_travel_num.arboretum>.slides>.slides-container{
+    width: 670px;
+    height: 436px;
+}
+.gp_travel>.gp_travel_num.arboretum>.slides>.slides-container>li{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: -9999px;
+}
+.gp_travel>.gp_travel_num.arboretum>.slides>.slides-container>li:nth-child(1){
+    display: block;
+}
+.gp_travel>.gp_travel_num.arboretum>.slides>.slides-container>li>img{
+    display: block;
+    width: 100%;
+    height: 436px;
+}
+
+/* 섹션 - 아티클 : 레일바이크 */
+.gp_travel>.gp_travel_num.railpark{flex-direction: row-reverse;}
+.gp_travel>.gp_travel_num.railpark>.slides{
+    overflow: hidden;
+    position: relative;
+    width: 670px;
+    height: 436px;
+    left: 0;
+    top: 0;
+}
+.gp_travel>.gp_travel_num.railpark>.slides>.slides-container{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(670px * 5);
+}
+.gp_travel>.gp_travel_num.railpark>.slides>.slides-container>li{
+}
+.gp_travel>.gp_travel_num.railpark>.slides>.slides-container>li>img{
+    display: block;
+    width: 100%;
+    height: 436px;
+}
+/* 섹션 - 아티클 : 호수 */
+.gp_travel>.gp_travel_num.lake>.frame{
+    overflow: hidden;
+    width: 350px;
+    height: 600px;
+}
+.gp_travel>.gp_travel_num.lake>.frame>img{
+    display: block;
+    height: 600px;
+}
+/* 섹션 - 아티클 : 미술관 */
+.gp_travel>.gp_travel_num.museum{height: 900px;}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual{
+    width: 670px;
+    height: 700px;
+}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.main{
+    display: block;
+    position: relative;
+    width: 670px;
+    height: 420px;
+    text-indent: -9999px;
+    background-image: url(../images/travel_img_museum1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #eebfb9;
+    box-sizing: border-box;
+}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.slides{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 280px;
+}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.slides>li{
+    width: 220px;
+}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.slides>li>a{
+    display: block;
+    height: 135px;
+}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.slides>li>a>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.slides>li.on>a,
+.gp_travel>.gp_travel_num.museum>.gp_travel_num.museum_visual>.slides>li:hover>a{
+    border: 5px solid #bfdf8a;
+    box-sizing: border-box;
+}
+/* 섹션 - 아티클 : 설명 */
+.gp_travel>.gp_travel_num>.explain{
+    position: relative;
+    width: 260px;
+    height: 450px;
+}
+.gp_travel>.gp_travel_num>.explain>h3{
+    margin: 30px 0 7px;
+    color: #bfdf8a;
+    font-size: 15px;
+}
+.gp_travel>.gp_travel_num>.explain>h4{
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-family: "나눔명조";
+}
+.gp_travel>.gp_travel_num>.explain>p{
+    padding: 10px 0;
+}
+.gp_travel>.gp_travel_num>.explain>span{
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+    width: 100px;
+    border: 3px solid #eebfb9;
+    box-sizing: border-box;
+}
+.gp_travel>.gp_travel_num>.explain>span>a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/* 섹션 - 아티클 : 페이지네이션 */
+.gp_travel>.gp_travel_num>.slides>.slides-pagination{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 150px;
+    margin-left: -75px;
+}
+.gp_travel>.gp_travel_num>.slides>.slides-pagination>li{
+    width: 10px;
+    border: 3px solid #fffef9;
+    border-radius: 50%;
+}
+.gp_travel>.gp_travel_num>.slides>.slides-pagination>li>a{
+    display: block;
+    height: 10px;
+    text-indent: -9999px;
+}
+.gp_travel>.gp_travel_num>.slides>.slides-pagination>li.on,
+.gp_travel>.gp_travel_num>.slides>.slides-pagination>li:hover{
+    border: 3px solid #b8e0d8;
+    background-color: #b8e0d8;
+}
+/* 섹션 - 아티클 : 네비게이션 이전, 다음 */
+.gp_travel>.gp_travel_num>.slides>.slides-navigation{
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+    width: 42px;
+    height: 42px;
+    text-indent: -9999px;
+}
+.gp_travel>.gp_travel_num>.slides>.slides-navigation.slides-prev{
+    left: 0;
+    background-image: url(../images/btn_slide_nav_left.png);
+}
+.gp_travel>.gp_travel_num>.slides>.slides-navigation.slides-next{
+    right: 0;
+    background-image: url(../images/btn_slide_nav_right.png);
+}
+/* 섹션 - 아티클 : 자동재생, 멈춤 */
+.gp_travel>.gp_travel_num>.slides>.slides-btn{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    text-indent: -9999px;
+}
+.gp_travel>.gp_travel_num>.slides>.slides-btn.play{
+    margin-right: 25px;
+    background-image: url(../images/travel_btn_play.png);
+}
+.gp_travel>.gp_travel_num>.slides>.slides-btn.pause{background-image: url(../images/travel_btn_pause.png);}
+/* 푸터 */
+footer{
+    height: 100px;
+    margin: 0 auto;
+    background-color: #666;
+}
+footer>.footer_container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+footer>.footer_container>p{
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    font-weight: 800;
+}
+footer>.footer_container>p>a{
+    color: #fff;
+    font-size: 24px;
+}
+footer>.footer_container>.footer_share{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    width: 400px;
+}
+footer>.footer_container>.footer_share>li{
+    display: block;
+    overflow: hidden;
+    width: 50px;
+    margin-left: 13px;
+}
+footer>.footer_container>.footer_share>li>a{
+    display: block;
+    height: 50px;
+    text-indent: -9999px;
+    background-image: url(../images/travel_btn_share.png);
+}
+footer>.footer_container>.footer_share>li>.line{background-position: -150px -10px;}
+footer>.footer_container>.footer_share>li>.facebook{background-position: -80px -10px;}
+footer>.footer_container>.footer_share>li>.twitter{background-position: -290px -10px;}
+footer>.footer_container>.footer_share>li>.band{background-position: -10px -10px;}
+footer>.footer_container>.footer_share>li>.kakaotalk{background-position: -220px -10px;}
+footer>address{
+    display: block;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    background-color: #555;
+}
+
+/* aside */
+aside{
+    position: fixed;
+    right: 30px;
+    bottom: 55px;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    background-image: url(../images/btn_top.png);
+    background-size: cover;
+    cursor: pointer;
+}
